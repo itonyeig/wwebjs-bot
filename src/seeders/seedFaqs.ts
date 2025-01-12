@@ -1,7 +1,7 @@
-import prisma from "../prismaClient"; // Adjust the path as needed
+import prisma from "../prismaClient";
 
 export async function seedFaqs() {
-  // 1. Check if FAQ table is empty
+  
   const faqCount = await prisma.faq.count();
   if (faqCount === 0) {
     console.log(":::No FAQs found – seeding default FAQs:::");
